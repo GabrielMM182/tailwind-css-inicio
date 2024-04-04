@@ -1,64 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-</head>
-<body> 
-  <div class="chat-notification">
-    <div class="chat-notification-logo-wrapper">
-      <img class="chat-notification-logo" src="./img/logo.jpg" alt="ChitChat Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <div
+      class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"
+    >
+      <div class="shrink-0">
+        <img
+          class="h-12 w-12 object-cover"
+          src="./img/logo.jpg"
+          alt="ChitChat Logo"
+        />
+      </div>
+      <div>
+        <div class="text-xl font-medium text-black">ChitChat</div>
+        <p class="text-slate-500">You have a new message!</p>
+      </div>
     </div>
-    <div class="chat-notification-content">
-      <h4 class="chat-notification-title">ChitChat</h4>
-      <p class="chat-notification-message">You have a new message!</p>
-    </div>
-  </div>
 
-  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-    <div class="shrink-0">
-      <img class="h-12 w-12 object-cover" src="./img/logo.jpg" alt="ChitChat Logo">
+    <div class="grid grid-cols-12 gap-4 max-w-sm mx-auto bg-white rounded-xl shadow-lg">
+      <img class="col-span-4 mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="./img/logo.jpg" alt="Woman's Face" />
+      <div class="col-span-8 text-center space-y-2 sm:text-left">
+         <div class="space-y-0.5">
+           <p class="text-lg text-black font-semibold">Erin Lindford</p>
+           <p class="text-slate-500 font-medium">Product Engineer</p>
+         </div>
+         <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+           Message
+         </button>
+      </div>
+     </div>
+     
+
+    <div
+      class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6"
+    >
+      <img
+        class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
+        src="./img/logo.jpg"
+        alt="Woman's Face"
+      />
+      <div class="text-center space-y-2 sm:text-left">
+        <div class="space-y-0.5">
+          <p class="text-lg text-black font-semibold">Erin Lindford</p>
+          <p class="text-slate-500 font-medium">Product Engineer</p>
+        </div>
+        <button
+          class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+        >
+          Message
+        </button>
+      </div>
     </div>
-    <div>
-       <div class="text-xl font-medium text-black">ChitChat</div>
-       <p class="text-slate-500">You have a new message!</p>
+
+    <div class="bg-gray-100 flex items-center justify-center h-screen">
+      <div class="bg-white p-8 rounded-lg shadow-md w-80">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+        <form>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Senha
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              id="password"
+              type="password"
+              placeholder="Senha"
+            />
+          </div>
+          <div class="grid grid-cols-12 gap-4">
+            <button class="col-span-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+               Entrar
+            </button>
+            <a href="#" class="col-span-4 text-blue-500 hover:text-blue-800 font-bold text-sm">
+               Criar conta
+            </a>
+           </div>
+        </form>
+      </div>
     </div>
-   </div>
-  
-  <style>
-    .chat-notification {
-      display: flex;
-      align-items: center;
-      max-width: 24rem;
-      margin: 0 auto;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      background-color: #fff;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    .chat-notification-logo-wrapper {
-      flex-shrink: 0;
-    }
-    .chat-notification-logo {
-      height: 3rem;
-      width: 3rem;
-    }
-    .chat-notification-content {
-      margin-left: 1.5rem;
-    }
-    .chat-notification-title {
-      color: #1a202c;
-      font-size: 1.25rem;
-      line-height: 1.25;
-    }
-    .chat-notification-message {
-      color: #718096;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-  </style>
-</body>
+  </body>
 </html>
-
